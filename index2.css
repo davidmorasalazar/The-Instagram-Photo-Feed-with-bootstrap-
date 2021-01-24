@@ -1,0 +1,41 @@
+body {background:#BDBDBD;
+margin: 0;}
+header{background: white;
+padding: 10px;}
+/* Usar el margin ayuda a que no se vea la linea gris antes de iniciar el titulo */
+header h1{margin: 0;}
+div {box-sizing: border-box;}
+div.post {background: white; margin: auto;
+  width: 70%;
+  padding: 10px; border-radius: 10px;}
+div.post img {width: 100%;}
+div.post .post-header h2{float: left;
+background: white;
+width: 80%; margin: 0px;}
+/* div.post .post-header .date-container{text-align: right; */
+/* background: white; */
+/* width: 20%;} */
+.date-container{
+    text-align: center; float: right;
+    margin-top: 14px; margin-right: 12px;
+}
+div.post h2, div.post p{padding: 10px;}
+div.container {width: 600px; margin: 15px;
+}
+div.container1 {width: 600px; margin: 15px;
+    margin-top: 50px;
+}
+div.post div.foto img{border-radius: 20px;
+    
+} 
+div.container h1{text-align: center;}
+
+}
+
+div.container2 {width: 600px; margin: 15px;
+  margin-top: 50px;
+}
+
+div.post div.foto4 img{border-radius: 20px;
+    height: 430; width: 40;
+} 

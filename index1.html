@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Instagram Photo Feed (with bootstrap)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/570de1b515.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+
+</head>
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
+    
+    /* Button used to open the contact form - fixed at the bottom of the page */
+    .open-button {
+      background-color: #555;
+      color: white;
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
+      position: fixed;
+      right: 28px;
+      width: 280px;
+    }
+    
+    /* The popup form - hidden by default */
+    .form-popup {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 15px;
+      border: 3px solid #f1f1f1;
+      z-index: 9;
+    }
+    
+    /* Add styles to the form container */
+    .form-container {
+      max-width: 300px;
+      padding: 10px;
+      background-color: white;
+    }
+    
+    /* Full-width input fields */
+    .form-container input[type=text], .form-container input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    }
+    
+    /* When the inputs get focus, do something */
+    .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+    
+    /* Set a style for the submit/login button */
+    .form-container .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;
+    }
+    
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+      background-color: red;
+    }
+    
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover, .open-button:hover {
+      opacity: 1;
+    }
+    </style>
+    
+<body style="overflow-x: hidden;">
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid" style="display: block;">
+                        <div class="col-8">
+                            <i class="fab fa-instagram fa-2x" style="margin-right: 1cm;"></i>
+                            <a class="navbar-brand" href="#">Instagram</a>
+                            </button>
+                        </div>
+                        <div class="col-4" style="float:right;margin-left: auto;">  
+                            <button class="btn btn-success" onclick="openForm()">Create a new post</button>
+
+                            <div class="form-popup" id="myForm">
+                              <form action="/action_page.php" class="form-container">
+                                <h3></h3>
+                            
+                                <label for="email"><b>Description of the post</b></label>
+                                <input type="text" placeholder="Enter Description" name="email" required>
+                            
+                                <label for="psw"><b></b></label>
+                                <button class="fas fa-camera" style="border-color: white;">
+                                
+                                </button>
+                                <p></p>                            
+                                <button type="submit" class="btn">Publish</button>
+                                <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+                              </form>
+                            </div>
+                            <script>
+                                function openForm() {
+                                  document.getElementById("myForm").style.display = "block";
+                                }
+                                
+                                function closeForm() {
+                                  document.getElementById("myForm").style.display = "none";
+                                }
+                                </script>                                
+                                <div class="dropdown btn-group" role="group">
+                                    <button id="btnGroupDrop1" class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false" style="margin-left:20px;">
+                                    <span class="navbar-toggler-icon"></span></button>
+                                    <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">something else here</a></li>
+                                    <li><a href="#">Log Out</a></li>
+                                    </ul>
+                                </div>                       
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                                <a href="index1.html" class="btn btn-dark border-0"><i class="fas fa-th"></i></a>          
+                        </div>
+                        <div class="col-6">
+                                <a href="index2.html" class="btn btn-outline-dark border-0"><i class="fas fa-th"></i></a>                                                       </div>
+                        </div>
+                    </div>
+
+            </nav>
+        </div>
+    </div>
+    <div class="container-fluid;">
+        <div class="row">
+            <div class="col-4">
+                <img src="https://as1.ftcdn.net/jpg/03/85/83/72/500_F_385837295_Vhn9zTjWsdrL6YxwAlr1Si22BxinhaD2.jpg" alt="gatis" style="width: 100%;">
+            </div>
+            <div class="col-4">   
+                <img src="https://as2.ftcdn.net/jpg/03/85/80/79/500_F_385807979_aWZTnitmNblBRMWkfD3iABEKcdsKmDfD.jpg" alt="felicidad" style="width: 100%;">
+            </div>
+            <div class="col-4">   
+                <img src="https://as1.ftcdn.net/jpg/03/85/81/36/500_F_385813651_SeUFRsgJEvl4MiSoS43wsFKQL9qCvwaE.jpg" alt="persona" style="width: 100%;">
+            </div>
+        </div>
+        <div class="row" style="margin-top:1cm">
+            <div class="col-4">
+                <img src="https://as1.ftcdn.net/jpg/03/85/83/72/500_F_385837295_Vhn9zTjWsdrL6YxwAlr1Si22BxinhaD2.jpg" alt="gatis" style="width: 100%;">
+            </div>
+            <div class="col-4">   
+                <img src="https://as2.ftcdn.net/jpg/03/85/80/79/500_F_385807979_aWZTnitmNblBRMWkfD3iABEKcdsKmDfD.jpg" alt="felicidad" style="width: 100%;">
+            </div>
+        </div>
+        <div class="row" style="margin-top:1cm">
+            <div class="col-4;">   
+                <img src="https://media.giphy.com/media/3ov9jQX2Ow4bM5xxuM/giphy.gif" alt="persona;" style="width: 31%;">
+            </div> 
+        </div>           
+    </div>
+
+</body>
+</html>
